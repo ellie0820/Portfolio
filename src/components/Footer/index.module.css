@@ -1,0 +1,64 @@
+@import '../../styles/componentsInit.css';
+
+.Footer {
+  margin-top: var(--v-xl);
+
+  @mixin Mobile-Container;
+
+  @media screen and (--desktop) {
+    padding-right: var(--desktop-h-1g);
+    padding-left: var(--desktop-h-1g);
+  }
+
+  &_Container {
+    padding: var(--v-s) var(--mobile-h-1g);
+    border-top: 1px solid var(--color-gray);
+    text-align: center;
+  }
+}
+
+.CopyRight {
+  color: var(--color-darkGray);
+
+  @mixin Text-CopyRight;
+
+  &.isDark {
+    color: var(--color-gray);
+  }
+}
+
+.Breadcrumbs {
+  color: var(--color-darkGray);
+  display: flex;
+  margin-bottom: var(--v-s);
+
+  @mixin Text-Small;
+
+  &.isDark {
+    color: var(--color-gray);
+  }
+}
+
+.BreadcrumbItem {
+  margin-right: 5px;
+
+  &::after {
+    content: '/';
+    margin-left: 5px;
+  }
+
+  &:last-child {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.BreadcrumbItem_Number {
+  margin-right: 5px;
+}

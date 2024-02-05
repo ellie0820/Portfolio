@@ -1,0 +1,273 @@
+@import '../../styles/componentsInit.css';
+
+.TagWithText {
+  display: flex;
+  align-items: center;
+
+  @mixin Text-Small;
+
+  &.isActive {
+    color: var(--color-teal);
+  }
+
+  &.isInActive {
+    color: var(--color-gray);
+    pointer-events: none;
+
+    &.isDark {
+      color: var(--color-darkGray);
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    size: 32px;
+    mask-repeat: no-repeat;
+    background-color: var(--color-black);
+    mask-size: 32px;
+    mask-image: url('/icons/tag.svg');
+  }
+
+  &.isDark {
+    &::before {
+      background-color: var(--color-white);
+    }
+  }
+
+  &.Button {
+    cursor: pointer;
+  }
+
+  &.isActive {
+    &::before {
+      background-color: var(--color-teal);
+    }
+  }
+
+  &.isInActive {
+    &::before {
+      background-color: var(--color-gray);
+
+      @media (prefers-color-scheme: dark) {
+        background-color: var(--color-darkGray);
+      }
+    }
+
+    &.isDark {
+      &::before {
+        background-color: var(--color-darkGray);
+      }
+    }
+  }
+
+  &.Apple {
+    &::before {
+      mask-image: url('/logos/apple.svg');
+    }
+  }
+
+  &.Babel {
+    &::before {
+      mask-image: url('/logos/babel.svg');
+    }
+  }
+
+  &.Chrome {
+    &::before {
+      mask-image: url('/logos/chrome.svg');
+    }
+  }
+
+  &.Css {
+    &::before {
+      mask-image: url('/logos/css.svg');
+    }
+  }
+
+  &.Desktop {
+    &::before {
+      mask-image: url('/icons/desktop.svg');
+    }
+  }
+
+  &.Es6 {
+    &::before {
+      mask-image: url('/logos/es6.svg');
+    }
+  }
+
+  &.EsLint {
+    &::before {
+      mask-image: url('/logos/eslint.svg');
+    }
+  }
+
+  &.Figma {
+    &::before {
+      mask-image: url('/logos/figma.svg');
+    }
+  }
+
+  &.Git {
+    &::before {
+      mask-image: url('/logos/git.svg');
+    }
+  }
+
+  &.Github {
+    &::before {
+      mask-image: url('/logos/github.svg');
+    }
+  }
+
+  &.GoogleAppScript {
+    &::before {
+      mask-image: url('/logos/googleappscript.svg');
+    }
+  }
+
+  &.GoogleDrive {
+    &::before {
+      mask-image: url('/logos/googledrive.svg');
+    }
+  }
+
+  &.Html {
+    &::before {
+      mask-image: url('/logos/html.svg');
+    }
+  }
+
+  &.Illustrator {
+    &::before {
+      mask-image: url('/logos/illustrator.svg');
+    }
+  }
+
+  &.JavaScript {
+    &::before {
+      mask-image: url('/logos/javascript.svg');
+    }
+  }
+
+  &.Jira {
+    &::before {
+      mask-image: url('/logos/jira.svg');
+    }
+  }
+
+  &.jQuery {
+    &::before {
+      mask-image: url('/logos/jquery.svg');
+    }
+  }
+
+  &.Mobile {
+    &::before {
+      mask-image: url('/icons/mobile.svg');
+    }
+  }
+
+  &.Next {
+    &::before {
+      mask-image: url('/logos/next.svg');
+    }
+  }
+
+  &.Node {
+    &::before {
+      mask-image: url('/logos/node.svg');
+    }
+  }
+
+  &.Npm {
+    &::before {
+      mask-image: url('/logos/npm.svg');
+    }
+  }
+
+  &.PhotoShop {
+    &::before {
+      mask-image: url('/logos/photoshop.svg');
+    }
+  }
+
+  &.Postcss {
+    &::before {
+      mask-image: url('/logos/postcss.svg');
+    }
+  }
+
+  &.Pug {
+    &::before {
+      mask-image: url('/logos/pug.svg');
+    }
+  }
+
+  &.React {
+    &::before {
+      mask-image: url('/logos/react.svg');
+    }
+  }
+
+  &.Sass {
+    &::before {
+      mask-image: url('/logos/sass.svg');
+    }
+  }
+
+  &.StyleLint {
+    &::before {
+      mask-image: url('/logos/stylelint.svg');
+    }
+  }
+
+  &.Slack {
+    &::before {
+      mask-image: url('/logos/slack.svg');
+    }
+  }
+
+  &.Sourcetree {
+    &::before {
+      mask-image: url('/logos/sourcetree.svg');
+    }
+  }
+
+  &.Trash {
+    &::before {
+      mask-image: url('/icons/trash.svg');
+    }
+  }
+
+  &.TypeScript {
+    &::before {
+      mask-image: url('/logos/typescript.svg');
+    }
+  }
+
+  &.VSCode {
+    &::before {
+      mask-image: url('/logos/vscode.svg');
+    }
+  }
+
+  &.Vue {
+    &::before {
+      mask-image: url('/logos/vue.svg');
+    }
+  }
+
+  &.Webpack {
+    &::before {
+      mask-image: url('/logos/webpack.svg');
+    }
+  }
+
+  &.Windows {
+    &::before {
+      mask-image: url('/logos/windows.svg');
+    }
+  }
+}

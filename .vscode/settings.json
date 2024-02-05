@@ -1,0 +1,7 @@
+{
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "svg.preview.background": "transparent",
+  "files.encoding": "utf8",
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 100
+}

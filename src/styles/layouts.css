@@ -1,0 +1,18 @@
+@define-mixin Mobile-Container {
+  padding-right: var(--mobile-h-1g);
+  padding-left: var(--mobile-h-1g);
+}
+
+@define-mixin Desktop-Container-Default {
+  max-width: calc(var(--desktop-container-default) + var(--desktop-h-1g) * 2);
+  padding-right: var(--desktop-h-1g);
+  padding-left: var(--desktop-h-1g);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@define-mixin Desktop-Container-Large {
+  max-width: var(--desktop-container-large);
+  margin-right: auto;
+  margin-left: auto;
+}

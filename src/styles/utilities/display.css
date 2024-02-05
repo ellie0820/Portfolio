@@ -1,0 +1,13 @@
+.u {
+  @media screen and (--desktop) {
+    &-only-mobile {
+      display: none;
+    }
+  }
+
+  @media screen and (--mobile) {
+    &-only-desktop {
+      display: none;
+    }
+  }
+}

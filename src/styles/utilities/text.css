@@ -1,0 +1,19 @@
+.u {
+  @each $value in (center, left, right) {
+    @media screen and (--mobile) {
+      &-mobile-align-$(value) {
+        text-align: $(value);
+      }
+    }
+
+    @media screen and (--desktop) {
+      &-desktop-align-$(value) {
+        text-align: $(value);
+      }
+    }
+
+    &-align-$(value) {
+      text-align: $(value);
+    }
+  }
+}

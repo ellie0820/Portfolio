@@ -1,0 +1,100 @@
+@import '../../styles/componentsInit.css';
+
+.Button {
+  size: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: '';
+    display: block;
+    size: 32px;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    background-color: var(--color-black);
+    mask-size: 32px;
+  }
+
+  &.isDark {
+    &:after {
+      background-color: var(--color-white);
+    }
+  }
+
+  &.isActive {
+    &::after {
+      background-color: var(--color-teal);
+    }
+  }
+
+  &.Mode {
+    &:after {
+      mask-image: url('/icons/mode-dark.svg');
+    }
+
+    &.isDark {
+      &:after {
+        mask-image: url('/icons/mode-light.svg');
+      }
+    }
+  }
+
+  &.Menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: var(--z-index-menu);
+    background-color: var(--overlay-light75);
+
+    &.isDark {
+      background-color: var(--overlay-dark75);
+    }
+
+    &::after {
+      mask-image: url('/icons/menu.svg');
+    }
+  }
+
+  &.Cancel {
+    &::after {
+      mask-image: url('/icons/cancel.svg');
+    }
+  }
+
+  &.Github {
+    &::after {
+      mask-image: url('/logos/github.svg');
+    }
+  }
+
+  &.Filter {
+    &::after {
+      mask-image: url('/icons/filter.svg');
+    }
+  }
+
+  &.Figma {
+    &::after {
+      mask-image: url('/logos/figma.svg');
+    }
+  }
+
+  &.Invisible {
+    &::after {
+      mask-image: url('/icons/invisible.svg');
+    }
+  }
+
+  &.Visible {
+    background-color: var(--overlay-light75);
+
+    &.isDark {
+      background-color: var(--overlay-dark75);
+    }
+
+    &::after {
+      mask-image: url('/icons/visible.svg');
+    }
+  }
+}

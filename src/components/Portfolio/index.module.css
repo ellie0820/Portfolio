@@ -1,0 +1,81 @@
+@import '../../styles/componentsInit.css';
+
+.TilesWrapper {
+  @media screen and (--desktop) {
+    @mixin Desktop-Container-Default;
+  }
+}
+
+.Filter {
+  @media screen and (--desktop) {
+    @mixin Desktop-Container-Default;
+  }
+}
+
+.Filter_Button {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.Filter_Container {
+  border-color: var(--color-gray);
+  border-style: solid;
+  position: relative;
+  height: 0;
+  border-width: 0;
+  transition: 0.2s all;
+
+  @mixin Mobile-Container;
+
+  @media screen and (--desktop) {
+    padding-left: var(--desktop-h-half);
+    padding-right: var(--desktop-h-half);
+  }
+
+  &.isOpen {
+    padding-top: var(--v-s);
+    padding-bottom: var(--v-s);
+    border-width: 1px 0;
+    height: auto;
+    transition: 0.2s all;
+
+    @media screen and (--desktop) {
+      padding-top: var(--v-m);
+      padding-bottom: var(--v-m);
+    }
+  }
+
+  &::before {
+    content: '';
+    display: none;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent var(--color-gray) transparent;
+    border-width: 0px 4px 6.93px 4px;
+    position: absolute;
+    top: -7px;
+    right: 20px;
+  }
+
+  &.isOpen {
+    &::before {
+      display: block;
+    }
+  }
+}
+
+.FilterListItem {
+  margin-right: var(--mobile-h-1g);
+  margin-top: var(--v-s);
+
+  @media screen and (--desktop) {
+    margin-right: var(--desktop-h-half);
+  }
+}
+
+.No_Data {
+  text-align: center;
+  margin-top: var(--v-l);
+  @mixin Number-DetailPages;
+}

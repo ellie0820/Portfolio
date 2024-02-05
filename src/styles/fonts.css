@@ -1,0 +1,113 @@
+@define-mixin Heading-Header {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 200;
+  font-size: calc(16 / 375 * 100vw);
+  line-height: 1;
+
+  @media screen and (--desktop) {
+    font-size: 16px;
+  }
+}
+
+@define-mixin Heading-H2 {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 200;
+  font-size: calc(32 / 375 * 100vw);
+  line-height: 1.2;
+
+  @media screen and (--desktop) {
+    font-size: 32px;
+  }
+}
+
+@define-mixin Heading-Menu {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 200;
+  font-size: calc(24 / 375 * 100vw);
+  line-height: 1.2;
+
+  @media screen and (--desktop) {
+    font-size: 24px;
+  }
+}
+
+@define-mixin Text-Default {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  font-size: calc(16 / 375 * 100vw);
+  line-height: 1.5;
+
+  @media screen and (--desktop) {
+    font-size: 16px;
+  }
+}
+
+@define-mixin Text-Enphasis {
+  font-weight: 500;
+}
+
+@define-mixin Text-Small {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  font-size: calc(14 / 375 * 100vw);
+  line-height: 1.2;
+
+  @media screen and (--desktop) {
+    font-size: 14px;
+  }
+}
+
+@define-mixin Text-CopyRight {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  font-size: calc(12 / 375 * 100vw);
+  line-height: 1.2;
+
+  @media screen and (--desktop) {
+    font-size: 12px;
+  }
+}
+
+@define-mixin Number-DetailPages {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+  font-size: calc(48 / 375 * 100vw);
+  line-height: 1.2;
+
+  @media screen and (--desktop) {
+    font-size: 48px;
+  }
+}
+
+@define-mixin Number-LargeThumbs {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+  font-size: calc(24 / 375 * 100vw);
+  line-height: 2;
+
+  @media screen and (--desktop) {
+    font-size: 24px;
+  }
+}
+
+@define-mixin Number-Menu {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+  font-size: calc(20 / 375 * 100vw);
+  line-height: 1;
+
+  @media screen and (--desktop) {
+    font-size: 20px;
+  }
+}
+
+@define-mixin Number-SmallThumbs {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+  font-size: calc(16 / 375 * 100vw);
+  line-height: 1.5;
+
+  @media screen and (--desktop) {
+    font-size: 16px;
+  }
+}

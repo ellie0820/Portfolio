@@ -1,0 +1,55 @@
+@import '../../../../styles/componentsInit.css';
+
+.Navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--v-m);
+
+  @mixin Mobile-Container;
+
+  @media screen and (--desktop) {
+    @mixin Desktop-Container-Default;
+  }
+}
+
+.NavigationItem {
+  display: block;
+  size: 48px;
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  background-color: var(--color-black);
+  mask-size: 32px;
+
+  &.isDark {
+    background-color: var(--color-white);
+  }
+
+  &.Prev {
+    mask-image: url('/icons/arrow-prev.svg');
+  }
+
+  &.Next {
+    mask-image: url('/icons/arrow-next.svg');
+  }
+
+  &.isInActive {
+    background-color: var(--color-gray);
+    pointer-events: none;
+
+    &.isDark {
+      background-color: var(--color-darkGray);
+    }
+  }
+}
+
+.Heading {
+  @mixin Number-DetailPages;
+  margin-right: var(--mobile-h-2g);
+  margin-left: var(--mobile-h-2g);
+
+  @media screen and (--desktop) {
+    margin-right: var(--desktop-h-2g);
+    margin-left: var(--desktop-h-2g);
+  }
+}

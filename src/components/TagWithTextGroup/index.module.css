@@ -1,0 +1,25 @@
+@import '../../styles/componentsInit.css';
+
+.Lists {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--v-xs) * -1);
+
+  @media screen and (--desktop) {
+    margin-top: calc(var(--v-s) * -1);
+  }
+}
+
+.ListItem {
+  margin-right: var(--mobile-h-half);
+  margin-top: var(--v-xs);
+
+  @media screen and (--desktop) {
+    margin-right: var(--desktop-h-half);
+    margin-top: var(--v-s);
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

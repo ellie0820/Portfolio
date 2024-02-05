@@ -1,0 +1,12 @@
+@import '../../styles/componentsInit.css';
+
+.Heading {
+  text-align: center;
+
+  @mixin Mobile-Container;
+  @mixin Heading-H2;
+
+  @media screen and (--desktop) {
+    @mixin Desktop-Container-Default;
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../styles/componentsInit.css';
+
+.Thumb {
+  size: calc(250 / 375 * 100vw);
+  margin-bottom: var(--v-m);
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (--desktop) {
+    size: 250px;
+    margin-bottom: var(--v-l);
+  }
+}
+
+.Body {
+  @mixin Mobile-Container;
+
+  @media screen and (--desktop) {
+    text-align: center;
+
+    @mixin Desktop-Container-Default;
+  }
+}

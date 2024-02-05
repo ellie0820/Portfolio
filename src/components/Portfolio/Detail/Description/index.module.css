@@ -1,0 +1,21 @@
+@import '../../../../styles/componentsInit.css';
+
+.DescriptionWrapper {
+  padding-top: var(--v-m);
+  background-color: var(--overlay-light75);
+  z-index: var(--z-index-detailDescription);
+
+  &.isDark {
+    background-color: var(--overlay-dark75);
+  }
+
+  @media screen and (--desktop) {
+    padding: var(--v-l) var(--desktop-h-1g) var(--v-m);
+    width: var(--desktop-container-menu);
+    max-height: 1920px;
+    overflow: scroll;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

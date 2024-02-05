@@ -1,0 +1,3 @@
+@custom-media --desktop-large (min-width: 1200px);
+@custom-media --desktop (min-width: 813px);
+@custom-media --mobile (max-width: 812px);

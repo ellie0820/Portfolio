@@ -1,0 +1,26 @@
+@import '../../../../styles/componentsInit.css';
+
+.Wrapper {
+  z-index: var(--z-index-detailHero);
+  @mixin Mobile-Container;
+
+  @media screen and (--desktop) {
+    padding-left: var(--desktop-h-1g);
+    padding-right: var(--desktop-h-1g);
+    @mixin Desktop-Container-Large;
+  }
+}
+
+.Container {
+  @media screen and (--desktop) {
+    max-height: 1920px;
+    position: relative;
+  }
+}
+
+.Buttons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: var(--z-index-visibleButton);
+}

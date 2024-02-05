@@ -1,0 +1,33 @@
+body {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  min-width: 375px;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+
+  @mixin Text-Default;
+
+  &.isDark {
+    color: var(--color-white);
+    background-color: var(--color-black);
+  }
+
+  &.isMenuShow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+dt {
+  font-weight: inherit;
+}
+
+button {
+  display: block;
+}

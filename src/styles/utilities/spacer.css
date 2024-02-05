@@ -1,0 +1,145 @@
+.u {
+  @each $key, $value in (xs, s, m, l, xl, xxl), (--v-xs, --v-s, --v-m, --v-l, --v-xl, --v-xxl) {
+    @media screen and (--mobile) {
+      &-mobile-pt-$(key) {
+        padding-top: var($(value));
+      }
+
+      &-mobile-pb-$(key) {
+        padding-bottom: var($(value));
+      }
+
+      &-mobile-py-$(key) {
+        padding-top: var($(value));
+        padding-bottom: var($(value));
+      }
+
+      &-mobile-mt-$(key) {
+        margin-top: var($(value));
+      }
+
+      &-mobile-mb-$(key) {
+        margin-bottom: var($(value));
+      }
+
+      &-mobile-my-$(key) {
+        margin-top: var($(value));
+        margin-bottom: var($(value));
+      }
+    }
+
+    @media screen and (--desktop) {
+      &-desktop-pt-$(key) {
+        padding-top: var($(value));
+      }
+
+      &-desktop-pb-$(key) {
+        padding-bottom: var($(value));
+      }
+
+      &-desktop-py-$(key) {
+        padding-top: var($(value));
+        padding-bottom: var($(value));
+      }
+
+      &-desktop-mt-$(key) {
+        margin-top: var($(value));
+      }
+
+      &-desktop-mb-$(key) {
+        margin-bottom: var($(value));
+      }
+
+      &-desktop-my-$(key) {
+        margin-top: var($(value));
+        margin-bottom: var($(value));
+      }
+    }
+
+    &-pt-$(key) {
+      padding-top: var($(value));
+    }
+
+    &-pb-$(key) {
+      padding-bottom: var($(value));
+    }
+
+    &-py-$(key) {
+      padding-top: var($(value));
+      padding-bottom: var($(value));
+    }
+
+    &-mt-$(key) {
+      margin-top: var($(value));
+    }
+
+    &-mb-$(key) {
+      margin-bottom: var($(value));
+    }
+
+    &-my-$(key) {
+      margin-top: var($(value));
+      margin-bottom: var($(value));
+    }
+  }
+
+  @each $key, $value in (half, 1g, 2g), (--mobile-h-half, --mobile-h-1g, --mobile-h-2g) {
+    @media screen and (--mobile) {
+      &-mobile-pr-$(key) {
+        padding-right: var($(value));
+      }
+
+      &-mobile-pl-$(key) {
+        padding-left: var($(value));
+      }
+
+      &-mobile-px-$(key) {
+        padding-right: var($(value));
+        padding-left: var($(value));
+      }
+
+      &-mobile-mr-$(key) {
+        margin-right: var($(value));
+      }
+
+      &-mobile-ml-$(key) {
+        margin-left: var($(value));
+      }
+
+      &-mobile-mx-$(key) {
+        margin-right: var($(value));
+        margin-left: var($(value));
+      }
+    }
+  }
+
+  @each $key, $value in (half, 1g, 2g), (--desktop-h-half, --desktop-h-1g, --desktop-h-2g) {
+    @media screen and (--desktop) {
+      &-desktop-pr-$(key) {
+        padding-right: var($(value));
+      }
+
+      &-desktop-pl-$(key) {
+        padding-left: var($(value));
+      }
+
+      &-desktop-px-$(key) {
+        padding-right: var($(value));
+        padding-left: var($(value));
+      }
+
+      &-desktop-mr-$(key) {
+        margin-right: var($(value));
+      }
+
+      &-desktop-ml-$(key) {
+        margin-left: var($(value));
+      }
+
+      &-desktop-mx-$(key) {
+        margin-right: var($(value));
+        margin-left: var($(value));
+      }
+    }
+  }
+}

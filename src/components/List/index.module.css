@@ -1,0 +1,84 @@
+@import '../../styles/componentsInit.css';
+
+.ListItem {
+  + .ListItem {
+    margin-top: var(--v-xs);
+
+    @media screen and (--desktop) {
+      margin-top: var(--v-s);
+    }
+  }
+}
+
+.DefinitionItem_Heading {
+  @mixin Text-Enphasis;
+}
+
+.DefinitionItem_Heading {
+  .Name &,
+  .Release &,
+  .Occupation &,
+  .Language & {
+    margin-right: calc(var(--mobile-h-half) / 2);
+
+    @media screen and (--desktop) {
+      margin-right: calc(var(--desktop-h-half) / 2);
+    }
+  }
+}
+
+.DefinitionItem_Heading,
+.DefinitionItem_Body {
+  .Name &,
+  .Release &,
+  .Occupation &,
+  .Language & {
+    display: inline-block;
+
+    .About & {
+      @media screen and (--desktop) {
+        display: block;
+      }
+    }
+  }
+}
+
+.SummaryItems {
+  padding-left: 1em;
+}
+
+.SummaryItem {
+  list-style: outside;
+}
+
+.Links {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--v-xs) * -1);
+
+  @media screen and (--desktop) {
+    justify-content: center;
+  }
+}
+
+.LinkItem {
+  margin-top: var(--v-xs);
+}
+
+.Blank {
+  text-decoration: underline;
+  color: var(--color-teal);
+  display: inline-flex;
+
+  &::after {
+    content: '';
+    display: block;
+    size: 32px;
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    background-color: var(--color-teal);
+    mask-size: 32px;
+    mask-image: url('/icons/blank.svg');
+    margin-left: 5px;
+  }
+}

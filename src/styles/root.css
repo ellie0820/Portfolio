@@ -1,0 +1,36 @@
+:root {
+  @each $key, $value in (white, black, teal, gray, darkGray),
+    (#fff, #212f3c, #45b39d, #aeb6bf, #85929e)
+  {
+    --color-$(key): $(value);
+  }
+
+  --color-black-rgb: 33, 47, 60;
+  --overlay-dark25: rgba(var(--color-black-rgb), 0.45);
+  --overlay-dark75: rgba(var(--color-black-rgb), 0.9);
+  --color-white-rgb: 255, 255, 255;
+  --overlay-light25: rgba(var(--color-white-rgb), 0.45);
+  --overlay-light75: rgba(var(--color-white-rgb), 0.9);
+
+  @each $key, $value in (xs, s, m, l, xl, xxl), (6px, 12px, 24px, 48px, 72px, 96px) {
+    --v-$(key): $(value);
+  }
+
+  @each $key, $value in (half, 1g, 2g), (2vw, 4vw, 8vw) {
+    --mobile-h-$(key): $(value);
+  }
+
+  @each $key, $value in (half, 1g, 2g), (15px, 30px, 60px) {
+    --desktop-h-$(key): $(value);
+  }
+
+  @each $key, $value in (thumbNumber, detailHero, detailDescription, visibleButton, overlay, menu),
+    (1, 3, 5, 7, 9, 11)
+  {
+    --z-index-$(key): $(value);
+  }
+
+  @each $key, $value in (default, menu, large), (960px, 40%, 1200px) {
+    --desktop-container-$(key): $(value);
+  }
+}

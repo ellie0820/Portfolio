@@ -1,0 +1,230 @@
+@import '../../../styles/componentsInit.css';
+
+.Tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  @media screen and (--desktop) {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+
+.TileItem {
+  cursor: pointer;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    background-color: var(--color-white);
+    position: absolute;
+    z-index: 1;
+  }
+
+  &.isDark {
+    &::before,
+    &::after {
+      background-color: var(--color-black);
+    }
+  }
+
+  &::before {
+    size: 1px 100%;
+    top: 0;
+    right: -0.5px;
+  }
+
+  &::after {
+    size: 100% 1px;
+    bottom: -0.5px;
+    left: 0;
+  }
+}
+
+.TileItem1 {
+  grid-area: 1 / 1 / 3 / 3;
+
+  @media screen and (--desktop) {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+}
+
+.TileItem2 {
+  grid-area: 1 / 3 / 2 / 4;
+
+  @media screen and (--desktop) {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+}
+
+.TileItem3 {
+  grid-area: 2 / 3 / 3 / 4;
+
+  @media screen and (--desktop) {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+}
+
+.TileItem4 {
+  grid-area: 3 / 2 / 5 / 4;
+
+  @media screen and (--desktop) {
+    grid-area: 1 / 3 / 3 / 5;
+  }
+}
+
+.TileItem5 {
+  grid-area: 3 / 1 / 4 / 2;
+
+  @media screen and (--desktop) {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+}
+
+.TileItem6 {
+  grid-area: 4 / 1 / 5 / 2;
+
+  @media screen and (--desktop) {
+    grid-area: 3 / 4 / 4 / 5;
+  }
+}
+
+.TileItem7 {
+  grid-area: 5 / 1 / 7 / 3;
+
+  @media screen and (--desktop) {
+    grid-area: 1 / 5 / 3 / 7;
+  }
+}
+
+.TileItem8 {
+  grid-area: 5 / 3 / 6 / 4;
+
+  @media screen and (--desktop) {
+    grid-area: 3 / 5 / 4 / 6;
+  }
+}
+
+.TileItem9 {
+  grid-area: 6 / 3 / 7 / 4;
+
+  @media screen and (--desktop) {
+    grid-area: 3 / 6 / 4 / 7;
+  }
+}
+
+.TileItem10 {
+  grid-area: 7 / 2 / 9 / 4;
+
+  @media screen and (--desktop) {
+    grid-area: 1 / 7 / 3 / 9;
+  }
+}
+
+.TileItem11 {
+  grid-area: 7 / 1 / 8 / 2;
+
+  @media screen and (--desktop) {
+    grid-area: 3 / 7 / 4 / 8;
+  }
+}
+
+.TileItem12 {
+  grid-area: 8 / 1 / 9 / 2;
+
+  @media screen and (--desktop) {
+    grid-area: 3 / 8 / 4 / 9;
+  }
+}
+
+.TileItem13 {
+  grid-area: 9 / 1 / 10 / 2;
+
+  @media screen and (--desktop) {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+}
+
+.TileItem14 {
+  grid-area: 9 / 2 / 10 / 3;
+
+  @media screen and (--desktop) {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+}
+
+.TileItem15 {
+  grid-area: 9 / 3 / 10 / 4;
+
+  @media screen and (--desktop) {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+
+  &::before {
+    display: none;
+  }
+}
+
+.TileItem2,
+.TileItem3,
+.TileItem4,
+.TileItem8,
+.TileItem9,
+.TileItem10 {
+  &::before {
+    @media screen and (--mobile) {
+      display: none;
+    }
+  }
+}
+
+.TileItem10,
+.TileItem12 {
+  &::before {
+    @media screen and (--desktop) {
+      display: none;
+    }
+  }
+}
+
+.TileItem4,
+.TileItem10 {
+  &::before {
+    right: unset;
+    left: -0.5px;
+
+    @media screen and (--desktop) {
+      right: -0.5px;
+      left: unset;
+    }
+  }
+}
+
+.TileItem_Container {
+  position: relative;
+}
+
+.TileItem_Number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  size: 32px;
+  z-index: var(--z-index-thumbNumber);
+  color: var(--color-black);
+
+  @mixin Number-SmallThumbs;
+
+  .Large & {
+    size: 48px;
+
+    @mixin Number-LargeThumbs;
+  }
+}
